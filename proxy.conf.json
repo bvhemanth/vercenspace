@@ -1,0 +1,8 @@
+[
+  {
+    "context": ["/v3", "/public"],
+    "target": "https://api.spacexdata.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+]

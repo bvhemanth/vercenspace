@@ -1,0 +1,22 @@
+@import "~src/colors";    
+
+.card{
+    max-height: 28rem;
+    height: 28rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: $space-white;
+    img{
+        background-color: $space-light;
+        height: 14rem;
+    }
+    &__title{
+        color: $space-primary;
+    }
+}
+
+.filters{
+    height: 33rem;
+    border-radius: 1rem;
+    background-color: $space-white;
+}

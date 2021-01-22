@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <header>
+        <h1>SpacEx Launch Programs</h1>
+    </header>
+    <section>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="filters p-3">
+                    <div>Filters</div>
+                    <div class="border-bottom">Filter Year</div>
+                    <div class="">
+                        <button (click)="filter()" class="">2018</button>
+                        <button (click)="filter()">2019</button>
+                        <button (click)="filter()">2020</button>
+                        <button (click)="filter()">2018</button>
+                        <button (click)="filter()">2019</button>
+                        <button (click)="filter()">2020</button>
+                        <button (click)="filter()">2018</button>
+                        <button (click)="filter()">2019</button>
+                        <button (click)="filter()">2020</button>
+                        <button (click)="filter()">2018</button>
+                        <button (click)="filter()">2019</button>
+                        <button (click)="filter()">2020</button>
+                        <button (click)="filter()">2018</button>
+                        <button (click)="filter()">2019</button>
+                        <button (click)="filter()">2020</button>
+
+                    </div>    
+                    <div class="border-bottom">Successfull Launch</div>
+                    <div class="">
+                        <button (click)="filter()">True</button>
+                        <button (click)="filter()">False</button>
+                    </div>  
+                    <div class="border-bottom">Successfull Landing</div>
+                    <div class="">
+                        <button>True</button>
+                        <button (click)="filter()">False</button>
+                    </div>    
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4" *ngFor="let data of launches">
+                        <div class="card p-3 mb-2">
+
+                            <img [src]=data.links.mission_patch_small  class="w-100"/>
+                            <span class="card__title font-weight-bold">
+                                {{data.mission_name}} #{{data.flight_number}}
+                            </span>
+                            <ul class="list-unstyled">
+                                <li class="pb-2">
+                                    <label class="font-weight-bold">
+                                        Missin Ids:
+                                    </label> 
+                                    {{data.mission_id}}
+                                </li>
+                                <li class="pb-2">
+                                    <label class="font-weight-bold">Launch Year :</label>{{data.launch_year}}
+                                </li>
+                                <li class="pb-2">
+                                    <label class="font-weight-bold">
+                                        Successfull Launch : 
+                                    </label>{{data.launch_success}}
+                                </li>
+                                <li class="pb-2">
+                                    <label class="font-weight-bold">
+                                        Successfull Landing :
+                                    </label>{{data.land_success}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
