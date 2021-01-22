@@ -15,6 +15,6 @@ export class SpacexService {
   }
 
   getAll(){
-    return this.http.get(`${ this.hostUrl}${this.endpoint}/launches?limit=100`);
+    return this.http.get(`${ this.hostUrl}${this.baseUrl}/launches?limit=100`);
   }
 }
