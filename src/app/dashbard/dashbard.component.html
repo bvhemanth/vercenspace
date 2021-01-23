@@ -12,75 +12,86 @@
                         <table class="w-100 text-center">
                             <tr>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2006)" [ngClass]="{'active' : isActive('2006')}">2006</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2006)" [ngClass]="{'active' : yearbutton === 2006}">2006</button>
                                 </td>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2007)" [ngClass]="{'active' : isActive('2007')}">2007</button>     
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2008)" [ngClass]="{'active' : isActive('2008')}">2008</button>
-                                </td>
-                                <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2009)" [ngClass]="{'active' : isActive('2009')}">2009</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2007)" [ngClass]="{'active' : yearbutton === 2007}">2007</button>     
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2010)" [ngClass]="{'active' : isActive('2010')}">2010</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2008)" [ngClass]="{'active' : yearbutton === 2008}">2008</button>
                                 </td>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2011)" [ngClass]="{'active' : isActive('2011')}">2011</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2012)" [ngClass]="{'active' : isActive('2012')}">2012</button>
-                                </td>
-                                <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2013)" [ngClass]="{'active' : isActive('2013')}">2013</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2009)" [ngClass]="{'active' : yearbutton === 2009}">2009</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2014)" [ngClass]="{'active' : isActive('2014')}">2014</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2010)" [ngClass]="{'active' : yearbutton === 2010}">2010</button>
                                 </td>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2015)" [ngClass]="{'active' : isActive('2015')}">2015</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2016)" [ngClass]="{'active' : isActive('2016')}">2016</button>
-                                </td>
-                                <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2017)" [ngClass]="{'active' : isActive('2017')}">2017</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2011)" [ngClass]="{'active' : yearbutton === 2011}">2011</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2018)" [ngClass]="{'active' : isActive('2018')}">2018</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2012)" [ngClass]="{'active': yearbutton === 2012}">2012</button>
                                 </td>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2019)" [ngClass]="{'active' : selectedyear=== 2019}">2019</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2013)" [ngClass]="{'active': yearbutton ===2013}">2013</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2020)" [ngClass]="{'active' : selectedyear=== 2020}">2020</button>
+                                    <button class="btn py-1 px-3" (click)="setYear(2014)" [ngClass]="{'active' : yearbutton===2014}">2014</button>
+                                </td>
+                                <td>
+                                    <button class="btn py-1 px-3" (click)="setYear(2015)" [ngClass]="{'active' : yearbutton===2015}">2015</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn py-1 px-3" (click)="setYear(2016)" [ngClass]="{'active' : yearbutton===2016}">2016</button>
+                                </td>
+                                <td>
+                                    <button class="btn py-1 px-3" (click)="setYear(2017)" [ngClass]="{'active': yearbutton===2017}">2017</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn py-1 px-3" (click)="setYear(2018)" [ngClass]="{'active': yearbutton===2018}">2018</button>
+                                </td>
+                                <td>
+                                    <button class="btn py-1 px-3" (click)="setYear(2019)" [ngClass]="{'active': yearbutton===2019}">2019</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btn py-1 px-3" (click)="setYear(2020)" [ngClass]="{'active': yearbutton===2020}">2020</button>
                                 </td>
                             </tr>
                         </table>
                     </div>    
                     <div class="border-bottom text-center">Successfull Launch</div>
+                    <!-- <table class="w-100 text-center">
+                        <tr>
+                            <td>
+                                <button (click)="setLaunch(true)" class="btn py-1"  [ngClass]="{'active' : isActiveLanuch(true)}">True</button>
+                            </td>
+                            <td>
+                                <button (click)="setLaunch(false)" class="btn py-1"  [ngClass]="{'active' : isActiveLanuch(false)}">False</button>
+                            </td>
+                        </tr>
+                    </table>   -->
+
                     <table class="w-100 text-center">
                         <tr>
                             <td>
-                                <button (click)="setLaunch(true)" class="btn py-1"  [ngClass]="{'active' : successlaunch}">True</button>
+                                <button class="btn py-1"  (click)="onClick(1)" [ngClass]="{'active':launchbutton==='successlaunch'}">True</button>
                             </td>
                             <td>
-                                <button (click)="setLaunch(false)" class="btn py-1"  [ngClass]="{'active' : successlaunch == false}">False</button>
+                            <button class="btn py-1"  (click)="onClick(2)" [ngClass]="{'active':launchbutton==='failedlaunch'}">False</button>
                             </td>
                         </tr>
                     </table>  
@@ -88,10 +99,10 @@
                     <table class="w-100 text-center">
                         <tr>
                             <td>
-                                <button (click)="setLanding(true)" class="btn py-1"  [ngClass]="{'active' : successlanding && successlanding !== null }">True</button>
+                                <button (click)="onClickLanding(true)" class="btn py-1"  [ngClass]="{'active':landingbutton==='successlanding'}">True</button>
                             </td>
                             <td>
-                                <button (click)="setLanding(false)" class="btn py-1"  [ngClass]="{'active' : successlanding == false }">False</button>
+                                <button (click)="onClickLanding(false)" class="btn py-1"  [ngClass]="{'active':landingbutton==='failedlanding'}">False</button>
                             </td>
                         </tr>
                     </table>    

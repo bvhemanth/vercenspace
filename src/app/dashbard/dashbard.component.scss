@@ -36,20 +36,6 @@
     }
 }
 
-.flex {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
-}
-.flex .item {
-    width: 15rem;
-    margin-right:.5rem
-}
-.flex .item:nth-child(4n){
-    margin-right: 0rem;
-}
-
 .loader {
     border: 16px solid $space-success-light;
     border-top: 16px solid $space-success;
@@ -64,3 +50,10 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+
+//   .active{
+//     background-color: black;
+//     color: white;
+//     border: 1px solid black;
+//   }
