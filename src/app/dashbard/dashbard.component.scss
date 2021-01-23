@@ -4,7 +4,7 @@
     max-height: 28rem;
     height: 28rem;
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: .5rem;
     background: $space-white;
     img{
         background-color: $space-light;
@@ -12,11 +12,55 @@
     }
     &__title{
         color: $space-primary;
+        font-size: .875rem;
+    }
+    li{
+        font-size: 0.875rem;
+        label{
+            font-size: 1rem;
+        }
     }
 }
 
 .filters{
-    height: 33rem;
-    border-radius: 1rem;
+    height: 32rem;
+    border-radius: .5rem;
     background-color: $space-white;
+    .btn{
+        font-size: .875rem;
+        background-color: $space-success-light;
+    }
+    .btn.active{
+        background-color: $space-success;
+        color: $space-dark;
+    }
 }
+
+.flex {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.flex .item {
+    width: 15rem;
+    margin-right:.5rem
+}
+.flex .item:nth-child(4n){
+    margin-right: 0rem;
+}
+
+.loader {
+    border: 16px solid $space-success-light;
+    border-top: 16px solid $space-success;
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    animation: spin 2s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
