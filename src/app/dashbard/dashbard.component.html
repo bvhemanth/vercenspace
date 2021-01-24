@@ -12,7 +12,7 @@
                         <table class="w-100 text-center">
                             <tr>
                                 <td>
-                                    <button class="btn py-1 px-3" (click)="setYear(2006)" [ngClass]="{'active' : yearbutton === 2006}">2006</button>
+                                    <button id="2006" class="btn py-1 px-3" (click)="setYear(2006)" [ngClass]="{'active' : yearbutton === 2006}">2006</button>
                                 </td>
                                 <td>
                                     <button class="btn py-1 px-3" (click)="setYear(2007)" [ngClass]="{'active' : yearbutton === 2007}">2007</button>     
@@ -99,7 +99,7 @@
                     <table class="w-100 text-center">
                         <tr>
                             <td>
-                                <button (click)="onClickLanding(true)" class="btn py-1"  [ngClass]="{'active':landingbutton==='successlanding'}">True</button>
+                                <button id="landingt" (click)="onClickLanding(true)" class="btn py-1"  [ngClass]="{'active':landingbutton==='successlanding'}">True</button>
                             </td>
                             <td>
                                 <button (click)="onClickLanding(false)" class="btn py-1"  [ngClass]="{'active':landingbutton==='failedlanding'}">False</button>

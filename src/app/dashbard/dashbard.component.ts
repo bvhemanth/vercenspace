@@ -1,18 +1,14 @@
 import { Component, OnInit, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 import { SpacexService } from '../services/spacex.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { promise, ActionSequence } from 'protractor';
-import { resolve } from 'dns';
-import { chainedInstruction } from '@angular/compiler/src/render3/view/util';
 import { pipe } from 'rxjs';
-import { concatMap, mergeMap, switchMap, map, take, delay } from 'rxjs/operators';
+import { switchMap} from 'rxjs/operators';
 @Component({
   selector: 'app-dashbard',
   templateUrl: './dashbard.component.html',
   styleUrls: ['./dashbard.component.scss']
 })
-export class DashbardComponent implements OnInit, AfterViewInit {
-  //years=[{name:'year', value:2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020]
+export class DashbardComponent implements OnInit {
   launches=[];
   selectedyear;
   successlaunch:any;
@@ -25,8 +21,7 @@ export class DashbardComponent implements OnInit, AfterViewInit {
   landingbutton: any;
   constructor(private spacex: SpacexService,
     private router: Router,
-    private route: ActivatedRoute,
-    private changeref: ChangeDetectorRef) {
+    private route: ActivatedRoute) {
       this.route.queryParams.subscribe(params => {
         this.selectedyear = params['launch_year'];
         this.successlaunch = params['launch_success'];
@@ -63,9 +58,7 @@ export class DashbardComponent implements OnInit, AfterViewInit {
       this.getData();
     }
   }
-  ngAfterViewInit(){
-   
-  }
+
 
   getData(){
     this.loading=true;
@@ -74,15 +67,6 @@ export class DashbardComponent implements OnInit, AfterViewInit {
       this.launches.push(data);
       this.loading=false;
     })  
-  }
-
-  setLaunch(isSccess){
-    this.successlaunch=isSccess;
-    this.filter();
-  }
-  setLanding(isSccess){
-    this.successlanding=isSccess;
-    this.filter();
   }
 
   filter(){
